@@ -1,0 +1,23 @@
+# ansible n1 -m git -a "repo=https://github.com/CeeyIT-Solutions/ecomm.git dest=/var/www/html"
+---
+- name: Deploy Web App
+  hosts: n2
+  become: yes
+
+  tasks:
+  - name: Install git
+    yum:
+      name: git
+      state: present
+
+  - name: Host code
+    git:
+      repo: https://github.com/CeeyIT-Solutions/food.git
+      dest: /var/www/html
+...       
+
+
+
+
+
+  
