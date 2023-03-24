@@ -1,8 +1,4 @@
 ---
-- name: Install Http server
-  hosts: g1
-  become: yes
-
   - name: Install Httpd
     yum:
       name: httpd
