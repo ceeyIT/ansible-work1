@@ -1,0 +1,17 @@
+# ansible n1 -m git -a "repo=https://github.com/CeeyIT-Solutions/ecomm.git dest=/var/www/html"
+---
+- name: Deploy Angular App
+  hosts: n2
+  become: yes
+
+  roles:
+   - apache
+   - angular
+
+...       
+
+
+
+
+
+  
